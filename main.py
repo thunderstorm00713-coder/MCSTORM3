@@ -38,10 +38,10 @@ yellow = Fore.YELLOW
 lyellow = Fore.LIGHTYELLOW_EX
 reset = Fore.RESET
 
-token = "OTYyMzMyOTQ4OTI4MDI4Njgz.YlGAZg.OHW6q9V1CvfNn8JinDNksl6ITF4"
+token = "here"
 
 methods_list = ['join', 'legitjoin', 'localhost', 'invalidnames', 'longnames', 'botjoiner', 'power', 'spoof', 'ping', 'spam', 'killer', 'nullping', 'charonbot', 'multikiller', 'packet', 'handshake', 'bighandshake', 'query', 'bigpacket', 'network', 'randombytes', 'extremejoin', 'spamjoin', 'nettydowner', 'ram', 'yoonikscry', 'colorcrasher', 'tcphit', 'queue', 'botnet', 'tcpbypass', 'ultimatesmasher', 'sf', 'nabcry'] # methods in mcstorm
-channel_id = 988979368355299369
+channel_id = 1383856003908632636
 protocols_list = ['758', '757', '756', '755', '754', '753', '751', '736', '735', '578', '575', '573', '498', '490', '485', '480', '477', '404', '401', '393', '340', '338 ', '335', '316', '210', '110', '109', '107', '47' ]
 
 
