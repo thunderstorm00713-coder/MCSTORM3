@@ -46,7 +46,12 @@ protocols_list = ['758', '757', '756', '755', '754', '753', '751', '736', '735',
 
 
 
-client = commands.Bot(command_prefix='$')
+# --- INTENTS SETUP (The Fix) ---
+# This allows the bot to see messages and member information
+intents = discord.Intents.default()
+intents.message_content = True  # Required to read commands starting with '$'
+
+client = commands.Bot(command_prefix='$', intents=intents)
 client.remove_command('help')
 
 
