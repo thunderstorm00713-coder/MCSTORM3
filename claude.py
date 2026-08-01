@@ -38,7 +38,7 @@ yellow = Fore.YELLOW
 lyellow = Fore.LIGHTYELLOW_EX
 reset = Fore.RESET
 
-token = "here"
+token = "YOUR_NEW_RESET_TOKEN_HERE"
 
 methods_list = ['join', 'legitjoin', 'localhost', 'invalidnames', 'longnames', 'botjoiner', 'power', 'spoof', 'ping', 'spam', 'killer', 'nullping', 'charonbot', 'multikiller', 'packet', 'handshake', 'bighandshake', 'query', 'bigpacket', 'network', 'randombytes', 'extremejoin', 'spamjoin', 'nettydowner', 'ram', 'yoonikscry', 'colorcrasher', 'tcphit', 'queue', 'botnet', 'tcpbypass', 'ultimatesmasher', 'sf', 'nabcry'] # methods in mcstorm
 channel_id = 1383856003908632636
