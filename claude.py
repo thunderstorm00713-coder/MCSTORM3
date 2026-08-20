@@ -699,7 +699,7 @@ async def joinmotd(ctx, arg1, arg2):
 
 @client.command()
 
-async def deathbot(ctx, arg1, arg2):
+async def deathbot(ctx, arg1, arg2, arg3):
     if arg1 == '1.1.1.1':
         await ctx.send('You cant attack 1.1.1.1')
         pass
